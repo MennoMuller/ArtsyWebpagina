@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.item {
+  height: 140px;
+  background-color: aquamarine;
+  border: solid 2px black;
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+  line-height: 140px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    flex-wrap: nowrap;
+  }
+  .item {
+    width: 75%;
+  }
+}
